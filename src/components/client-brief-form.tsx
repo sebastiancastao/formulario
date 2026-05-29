@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { saveBrief } from "@/app/actions/save-brief";
 import {
   initialBriefSaveState,
   type BriefSaveState,
   type UploadedMaterialFile,
 } from "@/lib/brief-submission";
+import seoLabLogo from "../../SeoLab Logo (3).png";
 import { useActionState, useEffect, useRef, useState } from "react";
 import type { ChangeEvent } from "react";
 
@@ -618,8 +620,27 @@ export function ClientBriefForm() {
 
       <div className="rounded-[2rem] border border-line bg-white/92 p-5 shadow-[0_18px_60px_rgba(36,127,148,0.12)] sm:p-8">
         <header className="rounded-[1.75rem] bg-[linear-gradient(135deg,var(--accent)_0%,var(--accent-soft)_100%)] px-5 py-6 text-white sm:px-6 sm:py-7">
+          <div className="flex items-center justify-between gap-4">
+            <div className="rounded-[1.4rem] bg-white px-4 py-3 shadow-[0_10px_30px_rgba(10,46,58,0.12)]">
+              <Image
+                src={seoLabLogo}
+                alt="SeoLab"
+                priority
+                className="h-auto w-[148px] sm:w-[180px]"
+              />
+            </div>
+
+            <button
+              type="button"
+              onClick={handleLanguageToggle}
+              className="self-start rounded-full border border-white/18 bg-white/14 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
+            >
+              {copy.languageToggle}
+            </button>
+          </div>
+
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-            <div className="max-w-3xl">
+            <div className="mt-5 max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/78">
                 {copy.headerEyebrow}
               </p>
@@ -630,14 +651,6 @@ export function ClientBriefForm() {
                 {copy.intro}
               </p>
             </div>
-
-            <button
-              type="button"
-              onClick={handleLanguageToggle}
-              className="self-start rounded-full border border-white/18 bg-white/14 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
-            >
-              {copy.languageToggle}
-            </button>
           </div>
 
           <div className="mt-5 flex flex-wrap gap-3">
