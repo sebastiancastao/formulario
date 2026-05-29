@@ -170,7 +170,7 @@ const copyByLanguage: Record<Language, CopyConfig> = {
     ],
     headerEyebrow: "Formulario",
     intro:
-      "Aqui solo se carga la parte operativa: materiales disponibles, links de apoyo, restricciones, aprobaciones y ritmo de actualizacion. El borrador se guarda automaticamente en este navegador para retomarlo despues.",
+      "El propósito de este formulario es recopilar la información necesaria para crear páginas especiales enfocadas en difusión orgánica. Estas páginas podrán incluir infografías, elementos interactivos, recursos visuales y contenido optimizado para mejorar su alcance, utilidad y posicionamiento.",
     languageToggle: "Ver en portugues",
     lastSavedLabel: "Ultimo guardado",
     locale: "es-CO",

@@ -20,8 +20,8 @@
   --color-accent-soft: var(--accent-soft);
   --color-line: var(--line);
   --color-muted: var(--muted);
-  --font-sans: var(--font-ibm-plex-sans);
-  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-poppins);
+  --font-display: var(--font-poppins);
 }
 
 * {
@@ -38,7 +38,7 @@ body {
     radial-gradient(circle at top right, rgba(36, 127, 148, 0.14), transparent 24%),
     linear-gradient(180deg, #eef2f4 0%, #e9eef0 100%);
   color: var(--foreground);
-  font-family: var(--font-ibm-plex-sans), sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   letter-spacing: -0.01em;
   min-height: 100vh;
 }
